@@ -1,6 +1,5 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -13,20 +12,20 @@ import Img from "gatsby-image"
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
 
-const Image = () => (
+const Download = () => (
   <StaticQuery
     query={graphql`
-      query {
-        logo: file(relativePath: { eq: "logo.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
+    {
+        allFile(filter: { extension: { eq: "pdf" } }) {
+          edges {
+            node {
+              publicURL
             }
           }
         }
       }
     `}
-    render={data => <Img fluid={data.logo.childImageSharp.fluid} />}
+    render={data => <a href={data.allFile.edges[0].node.publicURL} download>Download me CV</a>}
   />
 )
-export default Image
+export default Download

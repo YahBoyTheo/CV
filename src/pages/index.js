@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/Layout/layout"
 import SEO from "../components/seo"
+import Download from "../components/Download/download"
 
 const IndexPage = () => (
   <Layout>
@@ -16,7 +17,7 @@ const IndexPage = () => (
 		<h2>Projects</h2>
     <hr style={{height:'3px', backgroundColor:'#49111c'}}/>
 		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor a, quas, soluta vero officia quisquam maxime, aliquam sunt molestiae placeat ipsa natus beatae. Velit suscipit, cupiditate sapiente nulla deserunt eligendi asperiores culpa laborum odit voluptatibus assumenda quos ipsum aperiam voluptas!</p>	
-    <button>Download CV</button>
+    <Download />
   </section>
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>
