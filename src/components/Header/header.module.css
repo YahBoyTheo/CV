@@ -1,0 +1,12 @@
+.Header{
+    background-color:#fff;
+}
+
+.Container{
+    margin: 0 auto;
+    padding: 1.45rem 1rem;
+}
+
+.Logo{
+    max-width: 80px;
+}
